@@ -1,0 +1,121 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 60px;
+    background-color:  #937fb3;
+    ;
+    color: white;
+    overflow: hidden;
+    transition: width 0.3s;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    padding:20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    &.open {
+      width: 200px;
+    }
+    mat-icon{
+        color:blue;
+        // width:200px;
+    }
+    .menu-icon {
+      font-size: 24px;
+      margin: 15px 0;
+      cursor: pointer;
+    }
+  
+    .sidebar-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+    .active {
+        background-color: #00796b; /* Change to your desired color */
+        color: white;
+      }
+    mat-nav-list {
+      width: 100%;
+      display: flex;
+      flex-direction: column; /* Default column layout */
+    }
+  
+    a.mat-list-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 10px;
+      width: 100%;
+      color: inherit;
+      text-decoration: none;
+      padding: 8px 16px;
+      mat-icon {
+        margin-right: 10px;
+      }
+      .mdc-list-item__primary-text{
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap:10px !important;
+      }
+      .menu-text {
+        display: inline-block;
+        white-space: nowrap;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+        display: flex;
+        justify-content: center; /* Center-align label text */
+        text-align: center;
+      }
+  
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  
+    &:not(.open) .menu-text {
+      opacity: 0;
+      display: none;
+    }
+  
+    /* Mobile-specific layout for row display */
+    @media (max-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      height: 60px;
+      width: 100%;
+      bottom: 0;
+      top: auto;
+      left: 0;
+      padding: 0;
+      border-top: 1px solid #444;
+  
+      .sidebar-content {
+        flex-direction: row;
+        width: 100%;
+      }
+  
+      mat-nav-list {
+        flex-direction: row; /* Change to row layout on mobile */
+        justify-content: space-around; /* Evenly distribute items */
+      }
+  
+      a.mat-list-item {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 15px;
+        
+        /* Hide text on mobile to only show icons */
+        .menu-text {
+          display: none;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,38 @@
+<div class="status-card">
+    <div class="header">
+      <h4 class="title">{{ title }}</h4>
+      <span class="status" [ngStyle]="{ 'color': statusColor }">
+        <span class="status-dot" [ngStyle]="{ 'background-color': statusColor }"></span>
+        {{ status }}
+      </span>
+    </div>
+    
+    <div class="info">
+      <p><strong>Customer :</strong> {{ customer }}</p>
+      <p><strong>Supervisor :</strong> {{ supervisor }}</p>
+    </div>
+    
+    <div class="date-range">
+      <div class="date">
+        <span class="icon">📅</span>
+        <span>{{ fromDate }}</span>
+      </div>
+      <div class="date">
+        <span class="icon">📅</span>
+        <span>{{ toDate }}</span>
+      </div>
+    </div>
+    
+    <div class="progress-circle">
+      <div>
+        <app-circluar-progression
+        [percent]="percent"
+        [size]="size"
+        [strokeWidth]="strokewidth"
+        [progressColor]="progressColor"
+        [remainingColor]="remainingColor"
+      ></app-circluar-progression>
+      </div>
+    </div>
+  </div>
+  

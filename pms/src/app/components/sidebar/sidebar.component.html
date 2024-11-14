@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-12">
+      <div class="sidebar" [class.open]="isOpen" (mouseleave)="closeSidebar()" (mouseenter)="openSidebar()">
+        <mat-icon class="menu-icon" (click)="toggleSidebar()">menu</mat-icon>
+        <div class="sidebar-content">
+          <mat-nav-list>
+            <a mat-list-item *ngFor="let item of menuItems" 
+               routerLink="{{item.link}}" 
+               routerLinkActive="active" 
+               [routerLinkActiveOptions]="{ exact: true }">
+              <mat-icon>{{ item.icon }}</mat-icon>
+              <span class="menu-text" *ngIf="isOpen">{{ item.label }}</span>
+            </a>
+          </mat-nav-list>
+        </div>
+      </div>
+    </div>
+  </div>
+  

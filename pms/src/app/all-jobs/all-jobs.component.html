@@ -1,0 +1,19 @@
+<div class="container ">
+<mat-card class="card-list">
+  <app-status-card
+    *ngFor="let item of cardItems"
+    [title]="item.title"
+    [status]="item.status"
+    [statusColor]="item.statusColor"
+    [customer]="item.customer"
+    [supervisor]="item.supervisor"
+    [fromDate]="item.fromDate"
+    [toDate]="item.toDate"
+    [percent]="item.percent"
+    [size]="item.size"
+    [strokewidth]="item.strokewidth"
+    [progressColor]="item.progressColor"
+    [remainingColor]="item.remainingColor">
+  </app-status-card>
+</mat-card>
+</div>
