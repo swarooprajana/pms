@@ -27,6 +27,7 @@ import { PwdResetComponent } from './authentication/pwd-reset/pwd-reset.componen
 import { NewPwdComponent } from './authentication/new-pwd/new-pwd.component';
 import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { JobDetailsComponent } from './jobs/job-details/job-details.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { CalendarComponent } from './calendar/calendar.component';
     PwdResetComponent,
     NewPwdComponent,
     DashboardHomeComponent,
-    CalendarComponent
+    CalendarComponent,
+    JobDetailsComponent
    
   ],
   imports: [

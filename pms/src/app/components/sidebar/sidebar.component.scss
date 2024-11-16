@@ -154,36 +154,58 @@
 // Mobile styles
 @media (max-width: 768px) {
   .sidenav {
-    border-radius: 0; // Remove border radius on mobile
-    
+    height: 5rem;
+    width: 100%;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+    flex-direction: row;
+
     &.expanded {
+      height: 200px;
       width: 100%;
+    }
+
+    .logo-container {
+      display: none;
+    }
+
+    .sidenav-nav {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      .sidenav-nav-item {
+        flex: 1;
+        padding: 0;
+        height: 100%;
+
+        .sidenav-nav-link {
+          justify-content: center;
+          padding: 0.5rem;
+          height: 100%;
+          flex-direction: column;
+
+          i {
+            font-size: 1.5rem;
+          }
+
+          .link-text {
+            display: block;
+            margin-top: 0.25rem;
+          }
+        }
+      }
+    }
+
+    .scrollwrap {
+      height: auto;
+      overflow: hidden;
     }
   }
 }
 
-// Optional: Add a subtle gradient background
-.sidenav {
-  background: linear-gradient(180deg, #1a1b1e 0%, #1f2124 100%);
-}
 
-// Optional: Add hover effect for the entire nav item
-.sidenav-nav-item {
-  position: relative;
-  
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.05);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-  }
-  
-  &:hover::after {
-    transform: scaleX(1);
-  }
-}

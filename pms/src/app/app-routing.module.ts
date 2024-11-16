@@ -10,6 +10,7 @@ import { PwdResetComponent } from './authentication/pwd-reset/pwd-reset.componen
 import { NewPwdComponent } from './authentication/new-pwd/new-pwd.component';
 import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { JobDetailsComponent } from './jobs/job-details/job-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },  // Redirect to login if path is empty
@@ -24,7 +25,8 @@ const routes: Routes = [
       { path: '', component: DashboardHomeComponent }, // Default child route
       { path: 'alljobs', component: AllJobsComponent },
       { path: 'addjobs', component: AddJobComponent },
-      {path:"calender",component:CalendarComponent}
+      {path:"calender",component:CalendarComponent},
+      {path:"jobdetails",component:JobDetailsComponent}
       // Add more child routes as needed
     ]
   },
